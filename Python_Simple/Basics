@@ -1,0 +1,206 @@
+# Example-1:
+
+'''
+
+name=["Sandesh","Sagar","Rochak"]
+age=[20,25,19]
+job=["Engineer","Hotel Manager","Computer Engineer"]
+
+new_entity=zip(name,age,job)
+next_entity=set(new_entity)
+
+for i in next_entity:
+    print(i[0])
+    print(i[1])
+    print(i[2])
+    print("\n")
+'''
+
+# Example-2:
+
+'''
+a=["1","2","3"]
+b=["a","b","c"]
+
+for x,y in zip(a,b):
+    print((x+y))
+
+'''
+
+#floor division returns the values in integer(//)
+
+#Simple division:
+'''
+x=14/2
+print(x)
+
+'''
+
+# Floor division:
+
+'''
+y= 14//2
+print(y)
+
+'''
+
+#frozenset is a kind of set except its element is immutable.
+
+#Elements in Set:
+
+'''
+num=(1,2,3,4,5,6)
+Set=set(num)
+print(Set)
+
+Set.remove(1)
+print(Set)
+
+'''
+
+#Elements in frozenset:
+
+'''
+
+num=(1,2,3,4,5,6)
+Se=frozenset(num)
+print(Se)
+
+'''
+
+# Hence,no in-built functions are there in frozenset(),it will throw an error.
+
+#Program to print N numbers in a list without duplication
+'''
+num=[]
+
+n= int(input("Enter number of elements: "))
+
+for i in range(0,n):
+    e=int(input(""))
+    num.append(e)
+    
+print(list(set(num)))    
+    
+'''
+# Program to convert string elements of lists into integer
+
+'''
+x=["10","20","30","40","50","60"]
+
+for i in range(0,len(x)):
+    x[i]=int(x[i])
+    
+print(x)
+
+'''
+# Remove empty strings from lists
+
+'''
+empty=["","24","26","","33","98",""]
+while("" in empty):
+    empty.remove("")
+print(empty)
+
+'''
+
+# .py is the source code file while .pyc is the byte code file
+
+# Finding prime number from 1 to 100
+
+# Print letters of name:
+
+'''
+name="Sandesh"
+
+for i in name:
+    print(i)
+'''
+
+# Use of super()to call the base class inherited method in the child class.
+'''
+class Computer():
+    def __init__(self,ram,storage):
+        print("RAM=",ram)
+        print("Storage=",storage)
+class Laptop(Computer):
+    def __init__(self,ram,storage,model):
+        print("Model is",model)
+        super().__init__(ram,storage)
+
+Asus = Laptop("8GB","1TB","Asus Vivobook")
+
+'''
+
+a='''
+
+We use "instanceof" in java to check whether a class is subclass of given calIn python, we use issubclass keyword.
+Syntax:issubclass(subClassName,superClassName)
+Example:issubclass(equation,Addition)
+
+Destructor in Python are called when an object gets destroyed.
+Python has a garbage collector that handles the memory management
+automatically.
+The__del__() method is known as destructor method in Python.
+
+
+'''
+
+#Example of use of destructor __del__():
+'''
+class Student():
+    def __init__(self):
+        print("Welcome student..!!")
+    def __del__(self):
+        print("Student deleted,\n Destructor has been called.")
+
+obj=Student()
+
+'''
+
+
+'''
+class shape:
+    def __init__(self):
+        print("I'm a shape")
+
+class rect(shape):
+    def myself(self):
+        print("Myself Rectangle")
+        
+class sqr(shape):      
+    def myself(self):
+        print("Myself Square")
+        
+r= rect()
+s=sqr()
+
+for sh in(r,s):
+    sh.myself()
+    
+'''
+
+#Creating a class Robot and setting the name by the setter method,and constructor.
+
+class Robot():
+    
+    def __init__(self,name=None):
+        self.name = name
+
+    def say_hi(self):
+        
+        if self.name:
+            print("Hello,I am",self.name)
+        else:
+            print("Hello, I am a robot without a name")
+            
+    def set_name(self,name):
+        return self.name
+        
+x=Robot("Sandesh")
+y=Robot("John")
+z=Robot("Abraham")
+
+a=x.say_hi()
+b=y.say_hi()
+c=z.say_hi()
